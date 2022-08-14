@@ -1,7 +1,7 @@
 import ListDecks from "./ListDecks"
 import { deleteDeck } from "../utils/api";
 import ErrorMessage from "./ErrorMessage";
-import {useHistory } from "react-router-dom";
+import {useHistory,useParams } from "react-router-dom";
 
 
 
@@ -21,14 +21,13 @@ export const Deck = ({deck , handleDelete})=> {
 
       <p>{deck.description}</p>
  
-
       <div class="d-grid gap-6 d-md-block">  
     
-      <button className="btn btn-secondary" onClick={handleDelete}>
+      <button className="btn btn-secondary" onClick={()=>(deck.id)}>
       View
       </button>
 
-      <button className="btn btn-primary" onClick={handleDelete}>
+      <button className="btn btn-primary" onClick={()=>(deck.id)}>
       Study
       </button>
     

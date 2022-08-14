@@ -1,10 +1,10 @@
 import React, {Fragment} from "react";
-import{Link, Route, Switch, useRouteMatch} from "react-router-dom";
+import{Link, Route, Switch, useRouteMatch, useParams,} from "react-router-dom";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import ListDecks from "../home/ListDecks";
 import CreateDeck from "../home/CreateDeck";
-
+import Deck from "../home/Deck";
 
 function Layout() {
   return (
@@ -20,6 +20,11 @@ function Layout() {
 
 <Route path = "/decks/new">
  <CreateDeck />
+</Route>
+
+
+<Route path = "/decks/:deckId">
+ <Deck />
 </Route>
 
 
