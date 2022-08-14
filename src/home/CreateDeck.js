@@ -1,7 +1,7 @@
 import React, { useState} from "react"; 
-import {createDeck} from "../utils/api/index";
-import {useHistory} from "react-router-dom";
 
+import {useHistory} from "react-router-dom";
+import {createDeck} from "../utils/api/index";
 
 function CreateDeck({createDeck}) { 
   

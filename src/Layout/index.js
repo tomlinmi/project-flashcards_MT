@@ -5,6 +5,8 @@ import NotFound from "./NotFound";
 import ListDecks from "../home/ListDecks";
 import CreateDeck from "../home/CreateDeck";
 import Deck from "../home/Deck";
+import Study from "../home/Study";
+
 
 function Layout() {
   return (
@@ -27,6 +29,9 @@ function Layout() {
  <Deck />
 </Route>
 
+<Route path = "/decks/:deckId/study">
+ <Study />
+</Route>
 
 <Route>
 <NotFound />
