@@ -5,7 +5,7 @@ import ErrorMessage from "./ErrorMessage";
 import {useParams} from "react-router-dom";
 
 
-export const Study = ({readDeck, deckId})=> {
+export const Study = ({readDeck})=> {
 
       
   if (readDeck){
