@@ -6,7 +6,7 @@ import ListDecks from "../home/ListDecks";
 import CreateDeck from "../home/CreateDeck";
 import Deck from "../home/Deck";
 import Study from "../home/Study";
-import { DeckView } from "../home/DeckView";
+import DeckView from "../home/DeckView";
 
 function Layout() {
   return (

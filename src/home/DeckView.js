@@ -1,20 +1,25 @@
-
+import React, { useEffect, useState} from "react";
 import { deleteDeck } from "../utils/api";
 import ErrorMessage from "./ErrorMessage";
-import {useHistory,useParams } from "react-router-dom";
-
-
-const DeckView = ({handleDelete})=> {
+import {useHistory, useParams, } from "react-router-dom";
+import { readDeck } from "../utils/api";
+import {Deck} from "./Deck";
+export const DeckView = ({handleDelete})=> {
    
-        const [cards, setCards] = useState([]);
+        const [decks, setDecks] = useState([]);
         const [error, setError] = useState(undefined);
 
+const handleViewDeck = async (id) => {
+            
+            const viewDeck= await readDeck();
+            setDecks (readDeck);
+          };
 
     useEffect(() => {
  
         const abortController = new AbortController();
       
-          listCards(abortController.signal).then(setCards).catch(setError);
+          readDeck(abortController.signal).then(setDecks).catch(setError);
       
           return () => abortController.abort();
         }, []);
@@ -23,12 +28,10 @@ const DeckView = ({handleDelete})=> {
           return <ErrorMessage error={error} />;
         }
        
-        const listCards = cards.map((card) => < Card key={card.id} card={card} handleDelete={handleDelete} />);
-      console.log(listCards);
-
-
+        const list = decks.map((deck) => < Deck key={deck.id} deck={deck} handleDelete={handleDelete} />);
+console.log(list);
       
-  if (deck){
+
     return(
 
 
@@ -65,6 +68,8 @@ const DeckView = ({handleDelete})=> {
       </div>
       <div class="d-grid gap-6 d-md-block"> 
 
+      <section className="row">{list}</section>
+
       <button className="btn btn-secondary" onClick={()=>(deck.id)}>
       Edit
       </button>
@@ -78,8 +83,7 @@ const DeckView = ({handleDelete})=> {
       </div>
         
   );
-    }
-    return <ErrorMessage/>;
+  
   
 }
 
