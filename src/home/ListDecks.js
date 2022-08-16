@@ -46,11 +46,9 @@ console.log(list);
  
 
 const handleCreate = async (id) => {
-  const result = window.confirm("Create Deck?");
-  if (result) {
-    await createDeck();
-   return history.push ("/"); // After the create, send the user to the home page.
-  }
+
+   return history.push ("/decks/new"); // After the create, send the user to the home page.
+  
 };
 
 

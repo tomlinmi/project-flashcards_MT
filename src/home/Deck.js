@@ -8,6 +8,8 @@ import {useHistory,useParams } from "react-router-dom";
 export const Deck = ({deck , handleDelete})=> {
 
 
+  const history = useHistory();
+
       
   if (deck){
     return(
@@ -23,7 +25,7 @@ export const Deck = ({deck , handleDelete})=> {
  
       <div class="d-grid gap-6 d-md-block">  
     
-      <button className="btn btn-secondary" onClick={()=>(deck.id)}>
+      <button className="btn btn-secondary" onClick={()=>history.push (`/decks/${deck.id}`)}>  
       View
       </button>
 
