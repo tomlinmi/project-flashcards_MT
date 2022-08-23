@@ -1,5 +1,3 @@
-import React, {useState} from "react";
-
 
 function DeckForm({handleSubmit, handleCancel, content, setContent}){ 
 

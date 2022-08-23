@@ -5,8 +5,6 @@ import { Deck } from "./Deck";
 import {useHistory } from "react-router-dom";
 import { deleteDeck } from "../utils/api/index";
 
-import{createDeck} from "../utils/api/index";
-
 const ListDecks = ()=>{
 const [decks, setDecks] = useState([]);
 const [error, setError] = useState(undefined);

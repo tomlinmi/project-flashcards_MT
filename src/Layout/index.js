@@ -1,12 +1,12 @@
 import React, {Fragment} from "react";
-import{Link, Route, Switch, useRouteMatch, useParams,} from "react-router-dom";
+import{Route, Switch} from "react-router-dom";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import ListDecks from "../home/ListDecks";
 import CreateDeck from "../home/CreateDeck";
-import Deck from "../home/Deck";
 import Study from "../home/Study";
 import DeckView from "../home/DeckView";
+import EditDeck from "../home/EditDeck";
 
 function Layout() {
   return (
@@ -28,6 +28,10 @@ function Layout() {
  <DeckView />
 </Route>
 
+<Route path = "/decks/:deckId/edit">
+<EditDeck />
+</Route>
+
 <Route path = "/decks/:deckId/study">
  <Study />
 </Route>
@@ -43,3 +47,13 @@ function Layout() {
 }
 
 export default Layout;
+
+/*
+
+<Route path = "/decks/:deckId/cards/new">
+<AddCard />
+</Route>
+
+<Route path = "/decks/:deckId/cards/:cardId/edit">
+<EditCard />
+</Route>*/
