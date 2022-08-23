@@ -3,7 +3,7 @@ import { deleteCard, deleteDeck } from "../utils/api";
 import ErrorMessage from "./ErrorMessage";
 import { useParams, useHistory} from "react-router-dom";
 import { readDeck } from "../utils/api";
-
+import {Card} from "./Card";
 
 export const DeckView = ()=> {
    
@@ -43,7 +43,7 @@ const handleDeleteCard = async (id) => {
           return <ErrorMessage error={error} />;
         }
        
-     // const list = deck.cards.map((card) => < Card key={card.id} card={card} handleDeleteCard={handleDeleteCard} />);
+     //const list = deck.cards.map((card) => < Card key={card.id} card={card} handleDeleteCard={handleDeleteCard} />);
 //console.log(list);
 
 
@@ -84,7 +84,7 @@ console.log(deck);
   </div>
     
 
-      <section className="row"></section>
+      <section className="row"></section> 
       </div>
     </main>
   );

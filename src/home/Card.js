@@ -1,8 +1,8 @@
 import DeckView from "./DeckView";
 import ErrorMessage from "./ErrorMessage";
 import {useHistory,useParams } from "react-router-dom";
-
-export const Card = ({card , handleDeleteCard})=> {
+import Deck from "./Deck";
+export const Card = ({deck, card , handleDeleteCard})=> {
 const history = useHistory();
 
       
