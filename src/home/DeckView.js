@@ -25,10 +25,33 @@ const handleDeleteCard = async (id) => {
   const result = window.confirm("Delete this card?");
  if (result) {
     await deleteCard(id);
+       
+    const deck= await readDeck(deckId);
+    setDeck (deck);
+
     return history.push (`/decks/${deckId}`); 
  } 
   
 };   
+
+const handleEditDeck = async (id) => {
+
+  return history.push (`decks/${deck.id}/edit`); 
+ 
+};
+
+const handleStudy = async (id) => {
+
+  return history.push (`decks/${deck.id}/study`); 
+ 
+};
+
+const handleAddCards = async (id) => {
+
+  return history.push (`decks/${deck.id}/cards/new`); 
+ 
+};
+
 
     useEffect(() => {
     
@@ -42,14 +65,18 @@ const handleDeleteCard = async (id) => {
         if (error) {
           return <ErrorMessage error={error} />;
         }
-       
-     //const list = deck.cards.map((card) => < Card key={card.id} card={card} handleDeleteCard={handleDeleteCard} />);
-//console.log(list);
+  
+      console.log(deck);
+    //Card becomes a child of deckview with below, passing in deck to know the id of the deck to perform history.push
+    //need if statement for ensure deck is present before list is executed.
 
+     let list = [];
+      if (deck.cards){
+        list = deck.cards.map((card) => < Card key={card.id} deckId={deck.id} card ={card} handleDeleteCard={handleDeleteCard} />);
+        console.log(list);
+      }
 
-
-
-console.log(deck);
+ 
 
     return(
 
@@ -65,15 +92,15 @@ console.log(deck);
  
       <div class="d-grid gap-6 d-md-block">  
     
-      <button className="btn btn-secondary" onClick={()=>`/decks/${deckId}/edit`}>
+      <button className="btn btn-secondary" onClick={()=>handleEditDeck(deck.id)}>
       Edit
       </button>
 
-      <button className="btn btn-primary" onClick={()=>(deck.id)}>
+      <button className="btn btn-primary" onClick={()=>handleStudy(deck.id)}>
       Study
       </button>
 
-      <button className="btn btn-primary" onClick={()=>(deck.id)}>
+      <button className="btn btn-primary" onClick={()=>handleAddCards(deck.id)}>
       + Add Cards
       </button>
     
@@ -84,7 +111,7 @@ console.log(deck);
   </div>
     
 
-      <section className="row"></section> 
+      <section className="row">{list}</section> 
       </div>
     </main>
   );

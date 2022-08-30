@@ -1,9 +1,18 @@
-import DeckView from "./DeckView";
+
 import ErrorMessage from "./ErrorMessage";
-import {useHistory,useParams } from "react-router-dom";
-import Deck from "./Deck";
+import {useHistory} from "react-router-dom";
+
+//pull in props from deckview list variable
+
 export const Card = ({deck, card , handleDeleteCard})=> {
 const history = useHistory();
+
+
+const handleEditCards = async (id) => {
+
+  return history.push (`decks/${deck.id}/cards/${card.id}/edit`); 
+ 
+};
 
       
   if (card){
@@ -21,7 +30,7 @@ const history = useHistory();
  
       <div class="d-grid gap-6 d-md-block">  
     
-      <button className="btn btn-secondary" onClick={()=>history.push (`/deck/${deck.id}/cards/${card.id}/edit`)}>  
+      <button className="btn btn-secondary" onClick={()=>handleEditCards(card.id)}>  
      Edit
       </button>
     

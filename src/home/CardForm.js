@@ -1,7 +1,9 @@
+import {useHistory} from "react-router-dom";
+
 
 function CardForm({handleSubmit, content, setContent}){ 
 
-    
+  const history = useHistory(); 
 
 
     const handleDone = async (id) => {
@@ -18,7 +20,7 @@ function CardForm({handleSubmit, content, setContent}){
      
         <form name="create" onSubmit={(event)=>handleSubmit(event)}> 
          <div>
-        <h2>Add Card</h2>
+        <h2>React Router: Add Card</h2>
         </div>
               <div> 
                 <p>Front</p>
@@ -50,9 +52,9 @@ function CardForm({handleSubmit, content, setContent}){
                 <div> 
                   <button className= "btn btn-secondary" onClick = {handleDone}>
                     
-                   Done Cancel </button>
+                   Done </button>
       
-                  <button type="submit" className= "btn btn-primary" >Submit</button> 
+                  <button type="submit" className= "btn btn-primary" >Save</button> 
                 </div>
             
               
