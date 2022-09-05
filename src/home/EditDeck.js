@@ -34,8 +34,12 @@ history.push("/")};
 
   
 return ( 
+
+<>
+<h2>Edit Deck</h2>
+
  <DeckForm handleCancel={handleCancel} handleSubmit={handleSubmit} content={content} setContent={setContent}/>
- 
+ </>
 )
 } 
 

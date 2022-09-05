@@ -25,7 +25,7 @@ function Layout() {
  <CreateDeck />
 </Route>
 
-<Route path = "/decks/:deckId">
+<Route exact path = "/decks/:deckId">
  <DeckView />
 </Route>
 

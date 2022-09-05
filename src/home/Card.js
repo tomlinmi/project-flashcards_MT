@@ -10,7 +10,7 @@ const history = useHistory();
 
 const handleEditCards = async (id) => {
 
-  return history.push (`decks/${deck.id}/cards/${card.id}/edit`); 
+  return history.push (`/decks/${deck.id}/cards/${card.id}/edit`); 
  
 };
 

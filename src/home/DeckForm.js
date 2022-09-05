@@ -11,10 +11,8 @@ const handleChange = ({target}) => {
 
 return ( 
  
-    <form name="create" onSubmit={(event)=>handleSubmit(event)}> 
-     <div>
-    <h2>Create Deck</h2>
-    </div>
+    <form name="create/edit" onSubmit={(event)=>handleSubmit(event)}> 
+    
           <div> 
             <p>Name</p>
          

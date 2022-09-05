@@ -15,6 +15,7 @@ function CardForm({handleSubmit, content, setContent}){
     const handleChange = ({target}) => { 
       const value = target.value; setContent({ ...content, [target.name]: value, }); }; 
     
+     
     
     return ( 
      
@@ -26,12 +27,12 @@ function CardForm({handleSubmit, content, setContent}){
                 <p>Front</p>
              
                 <textarea 
-                    id="description" 
-                    name="description" 
+                    id="front" 
+                    name="front" 
                     type="text" 
-                    placeholder="Brief description of the deck" 
+                    placeholder="Brief description of the card" 
                     onChange={handleChange} 
-                    value={content.description} 
+                    value={content.front} 
                     />  
                       <p></p>
                 </div> 
@@ -40,12 +41,12 @@ function CardForm({handleSubmit, content, setContent}){
                   <p>Back</p>
                 
                   <textarea 
-                    id="description" 
-                    name="description" 
+                    id="back" 
+                    name="back" 
                     type="text" 
-                    placeholder="Brief description of the deck" 
+                    placeholder="Brief description of the card" 
                     onChange={handleChange} 
-                    value={content.description} 
+                    value={content.back} 
                     /> 
                       <p></p>
                 </div> 

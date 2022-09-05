@@ -36,19 +36,19 @@ const handleDeleteCard = async (id) => {
 
 const handleEditDeck = async (id) => {
 
-  return history.push (`decks/${deck.id}/edit`); 
+  return history.push (`/decks/${deck.id}/edit`); 
  
 };
 
 const handleStudy = async (id) => {
 
-  return history.push (`decks/${deck.id}/study`); 
+  return history.push (`/decks/${deck.id}/study`); 
  
 };
 
 const handleAddCards = async (id) => {
 
-  return history.push (`decks/${deck.id}/cards/new`); 
+  return history.push (`/decks/${deck.id}/cards/new`); 
  
 };
 
