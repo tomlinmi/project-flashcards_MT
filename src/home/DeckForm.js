@@ -45,7 +45,7 @@ return (
                 
                 Cancel </button>
   
-              <button type="submit" className= "btn btn-primary" >Submit</button> 
+              <button type="submit" className= "btn btn-primary" onClick = {handleSubmit} >Submit</button> 
             </div>
         
           

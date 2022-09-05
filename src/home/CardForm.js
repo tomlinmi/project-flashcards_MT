@@ -20,9 +20,7 @@ function CardForm({handleSubmit, content, setContent}){
     return ( 
      
         <form name="create" onSubmit={(event)=>handleSubmit(event)}> 
-         <div>
-        <h2>React Router: Add Card</h2>
-        </div>
+       
               <div> 
                 <p>Front</p>
              
