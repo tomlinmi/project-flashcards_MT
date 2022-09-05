@@ -3,6 +3,8 @@ import React, { useState} from "react";
 import {useHistory, useParams} from "react-router-dom";
 import {readDeck} from "../utils/api/index";
 import DeckForm from "./DeckForm";
+import { updateDeck } from "../utils/api/index";
+
 
 function EditDeck() { 
   
@@ -18,13 +20,13 @@ function EditDeck() {
     const {deckId} = useParams(); 
     
 
-
+//***missing update deck handler */
  
  const handleSubmit = async (event) => { 
     event.preventDefault(); 
     console.log("Submitted:", content); 
     let response =await readDeck(deckId,content) ; 
-   history.push("/");
+
     setContent({...initialFormState}); 
    return response;
   }; 
