@@ -1,7 +1,9 @@
 import React, { useState} from "react"; 
 
 import {useHistory} from "react-router-dom";
+import {readDeck} from "../utils/api/index";
 import {createCard} from "../utils/api/index";
+
 import CardForm from "./CardForm";
 
 function AddCard() { 
@@ -17,6 +19,7 @@ const initialFormState = {
 const [content, setContent] = useState({...initialFormState}); 
 const history = useHistory();
 
+//*********I am not loading the deck to add this card to
 
  const handleSubmit = async (event) => { 
     event.preventDefault(); 
