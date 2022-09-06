@@ -8,7 +8,7 @@ export const Card = ({deck, card , handleDeleteCard})=> {
 const history = useHistory();
 
 
-const handleEditCards = async (id) => {
+const handleEditCard = async (id) => {
 
   return history.push (`/decks/${deck.id}/cards/${card.id}/edit`); 
  
@@ -30,7 +30,7 @@ const handleEditCards = async (id) => {
  
       <div class="d-grid gap-6 d-md-block">  
     
-      <button className="btn btn-secondary" onClick={()=>handleEditCards(card.id)}>  
+      <button className="btn btn-secondary" onClick={()=>handleEditCard(card.id)}>  
      Edit
       </button>
     

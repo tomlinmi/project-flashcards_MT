@@ -70,6 +70,12 @@
       "back": "New card 3",
       "deckId": 1,
       "id": 10
+    },
+    {
+      "front": "New Card 1",
+      "back": "This is new Card 1",
+      "deckId": 3,
+      "id": 11
     }
   ]
 }

@@ -30,7 +30,7 @@ function Layout() {
  <DeckView />
 </Route>
 
-<Route path = "/decks/:deckId/cards/new">
+<Route exact path = "/decks/:deckId/cards/new">
 <AddCard />
 </Route>
 
@@ -38,13 +38,13 @@ function Layout() {
 <EditCard />
 </Route>
 
-<Route path = "/decks/:deckId/edit">
+<Route exact path = "/decks/:deckId/edit">
 <EditDeck />
 </Route>
 
 
 
-<Route path = "/decks/:deckId/study">
+<Route exact path = "/decks/:deckId/study">
  <Study />
 </Route>
 
