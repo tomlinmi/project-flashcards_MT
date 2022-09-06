@@ -2,8 +2,8 @@
   "decks": [
     {
       "id": 1,
-      "name": "Rendering in React",
-      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+      "name": "Rendering in React Updated",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation.  With update"
     },
     {
       "name": "React Router",
@@ -14,6 +14,11 @@
       "name": "Michelle",
       "description": "This is a test",
       "id": 3
+    },
+    {
+      "name": "Michelle Test 2",
+      "description": "This is another deck created",
+      "id": 4
     }
   ],
   "cards": [
@@ -42,17 +47,29 @@
       "id": 4
     },
     {
-      "front": "What does <Switch> do?",
-      "back": "Renders the first matching child <Route> ",
-      "deckId": 2,
-      "id": 5
-    },
-    {
       "cards": [],
       "front": "b",
       "back": "b",
       "deckId": 1,
       "id": 7
+    },
+    {
+      "front": "New Card",
+      "back": "Add new card",
+      "deckId": 1,
+      "id": 8
+    },
+    {
+      "front": "New Card 2",
+      "back": "Add new card 2 ",
+      "deckId": 1,
+      "id": 9
+    },
+    {
+      "front": "Card 3",
+      "back": "New card 3",
+      "deckId": 1,
+      "id": 10
     }
   ]
 }

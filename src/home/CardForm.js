@@ -1,17 +1,11 @@
 import {useHistory} from "react-router-dom";
 
 
-function CardForm({handleSubmit, content, setContent}){ 
+function CardForm({handleDone, handleSave, content, setContent}){ 
 
   const history = useHistory(); 
 
-
-    const handleDone = async (id) => {
-
-        return history.push ("/decks/:deckId"); // After done, send the user to the deck screen.
-       
-     };
-
+  
     const handleChange = ({target}) => { 
       const value = target.value; setContent({ ...content, [target.name]: value, }); }; 
     
@@ -19,12 +13,12 @@ function CardForm({handleSubmit, content, setContent}){
     
     return ( 
      
-        <form name="create" onSubmit={(event)=>handleSubmit(event)}> 
+        <form name="create" onSubmit={(event)=>handleSave(event)}> 
        
               <div> 
                 <p>Front</p>
              
-                <textarea 
+                <textarea cols={75} resize = "none"
                     id="front" 
                     name="front" 
                     type="text" 
@@ -38,7 +32,7 @@ function CardForm({handleSubmit, content, setContent}){
                  <div> 
                   <p>Back</p>
                 
-                  <textarea 
+                  <textarea cols={75} resize = "none"
                     id="back" 
                     name="back" 
                     type="text" 
@@ -53,7 +47,7 @@ function CardForm({handleSubmit, content, setContent}){
                     
                    Done </button>
       
-                  <button type="submit" className= "btn btn-primary" >Save</button> 
+                  <button type="submit" className= "btn btn-primary" onClick= {handleSave} >Save</button> 
                 </div>
             
               

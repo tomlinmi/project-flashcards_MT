@@ -30,7 +30,7 @@ return (
              <div> 
               <p>Description</p>
             
-              <textarea 
+              <textarea cols={75} resize = "none"
                 id="description" 
                 name="description" 
                 type="text" 

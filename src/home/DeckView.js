@@ -66,7 +66,7 @@ const handleAddCards = async (id) => {
           return <ErrorMessage error={error} />;
         }
   
-      console.log(deck);
+      //console.log(deck);
     //Card becomes a child of deckview with below, passing in deck to know the id of the deck to perform history.push
     //need if statement for ensure deck is present before list is executed.
 

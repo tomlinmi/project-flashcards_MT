@@ -1,4 +1,4 @@
-import React, { useState} from "react"; 
+import React, { useEffect, useState} from "react"; 
 
 import {useHistory, useParams} from "react-router-dom";
 import {readDeck} from "../utils/api/index";
@@ -18,21 +18,34 @@ function EditDeck() {
     const [content, setContent] = useState({...initialFormState}); 
     const history = useHistory();
     const {deckId} = useParams(); 
+    const [deck, setDeck] = useState([]);
     
 
-//***missing update deck handler */
+
+   useEffect(() => {
+      async function getDeck() {
+        const deck = await readDeck(deckId);  
+        setDeck(deck);
+        setContent({name:deck.name, description:deck.description});   
+      }
+  
+      getDeck();
+    }, [deckId]);
+  
+ 
  
  const handleSubmit = async (event) => { 
     event.preventDefault(); 
     console.log("Submitted:", content); 
-    let response =await readDeck(deckId,content) ; 
+const updatedDeck = {...deck, name:content.name, description:content.description}
+    await updateDeck(updatedDeck); 
 
     setContent({...initialFormState}); 
-   return response;
+   return history.push(`/decks/${deckId}`)
   }; 
 
 const handleCancel = async()=>{
-history.push("/")};
+history.push(`/decks/${deckId}`)};
 
   
 return ( 
