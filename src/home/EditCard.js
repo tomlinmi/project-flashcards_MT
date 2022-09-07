@@ -1,7 +1,6 @@
 import React, { useEffect, useState} from "react"; 
 
 import {useHistory, useParams} from "react-router-dom";
-import {readDeck} from "../utils/api/index";
 import { readCard } from "../utils/api/index";
 import CardForm from "./CardForm";
 import { updateCard } from "../utils/api/index";
@@ -18,6 +17,7 @@ const initialFormState = {
 
 const [content, setContent] = useState({...initialFormState}); 
 const history = useHistory();
+
 const {cardId} = useParams();
 const[card, setCard]= useState([]);
 
