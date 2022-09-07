@@ -4,13 +4,13 @@ import {useHistory} from "react-router-dom";
 
 //pull in props from deckview list variable
 
-export const Card = ({deck, card , handleDeleteCard})=> {
+export const Card = ({deckId, card , handleDeleteCard})=> {
 const history = useHistory();
 
 
 const handleEditCard = async (id) => {
 
-  return history.push (`/decks/${deck.id}/cards/${card.id}/edit`); 
+  return history.push (`/decks/${deckId}/cards/${card.id}/edit`); 
  
 };
 

@@ -7,10 +7,8 @@ import CardForm from "./CardForm";
 import { updateCard } from "../utils/api/index";
 
 
-function EditCard() { 
+function EditCard({deckId} ) { 
   
-     
-  // When the form is submitted, a new card should be created, and the form contents cleared. 
     
 const initialFormState = { 
   front:"", 
@@ -20,27 +18,13 @@ const initialFormState = {
 
 const [content, setContent] = useState({...initialFormState}); 
 const history = useHistory();
-
-
-const {deckId} = useParams(); 
-const [deck, setDeck] = useState([]);
 const {cardId} = useParams();
 const[card, setCard]= useState([]);
 
 useEffect(() => {
-  async function getDeck() {
-    const deck = await readDeck(deckId);  
-    setDeck(deck);
-    setContent({name:deck.name, description:deck.description});   
-  }
-
-  getDeck();
-}, [deckId]);
-
-useEffect(() => {
     async function getCard() {
       const card = await readCard(cardId);  
-      setDeck(card);
+      setCard(card);
       setContent({front:card.front, back:card.back});   
     }
   
