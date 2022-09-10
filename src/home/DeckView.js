@@ -79,9 +79,16 @@ const handleAddCards = async (id) => {
  
 
     return(
+    <>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{deck.name}</li>
+      </ol>
+    </nav>
 
 
-      <main className="container">
+           <main className="container">
     <div className="border p-4 h-100 d-flex flex-column">
      <div>
    
@@ -107,13 +114,14 @@ const handleAddCards = async (id) => {
       <button className="btn btn-danger" onClick={()=>handleDelete(deck.id)}>
       Delete Deck
       </button>
-     
+    
   </div>
     
 
       <section className="row">{list}</section> 
       </div>
     </main>
+    </>
   );
 
 
