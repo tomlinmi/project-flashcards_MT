@@ -10,6 +10,8 @@ export const Deck = ({deck , handleDelete})=> {
       
   if (deck){
     return(
+<>
+    
 
 
     <div className="border p-4 h-100 d-flex flex-column">
@@ -38,7 +40,7 @@ export const Deck = ({deck , handleDelete})=> {
       </div>
 
       </div>
-
+</>
           
   
   );

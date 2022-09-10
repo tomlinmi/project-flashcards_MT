@@ -51,6 +51,15 @@ history.push(`/decks/${deckId}`)};
 return ( 
 
 <>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">{deck.name}</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Edit Deck</li>
+      </ol>
+    </nav>
+
 <h2>Edit Deck</h2>
 
  <DeckForm handleCancel={handleCancel} handleSubmit={handleSubmit} content={content} setContent={setContent}/>

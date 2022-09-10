@@ -6,6 +6,7 @@ import CardForm from "./CardForm";
 import { updateCard } from "../utils/api/index";
 
 
+
 function EditCard({deckId} ) { 
   
     
@@ -50,6 +51,16 @@ useEffect(() => {
 return ( 
 
 <>
+<nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Deck {deckId}</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Edit Card: {cardId}</li>
+      </ol>
+    </nav>
+
+
+
 <h2>Edit Card</h2>
 
  <CardForm handleCancel={handleCancel} handleSubmit={handleSubmit} content={content} setContent={setContent}/>

@@ -22,7 +22,7 @@ function CardForm({handleDone, handleSave, content, setContent}){
                     id="front" 
                     name="front" 
                     type="text" 
-                    placeholder="Brief description of the card" 
+                    placeholder="Front side of the card" 
                     onChange={handleChange} 
                     value={content.front} 
                     />  
@@ -36,7 +36,7 @@ function CardForm({handleDone, handleSave, content, setContent}){
                     id="back" 
                     name="back" 
                     type="text" 
-                    placeholder="Brief description of the card" 
+                    placeholder="Back side of the card" 
                     onChange={handleChange} 
                     value={content.back} 
                     /> 
