@@ -48,8 +48,8 @@
     },
     {
       "cards": [],
-      "front": "b",
-      "back": "b",
+      "front": "updated card",
+      "back": "card updated",
       "deckId": 1,
       "id": 7
     },
@@ -72,7 +72,7 @@
       "id": 10
     },
     {
-      "front": "New Card 1",
+      "front": "New Card 1 - with update. With  2nd update. Update # 3",
       "back": "This is new Card 1",
       "deckId": 3,
       "id": 11

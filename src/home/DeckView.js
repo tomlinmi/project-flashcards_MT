@@ -72,7 +72,7 @@ const handleAddCards = async (id) => {
 
      let list = [];
       if (deck.cards){
-        list = deck.cards.map((card) => < Card key={card.id} deckId={deck.id} card ={card} handleDeleteCard={handleDeleteCard} />);
+        list = deck.cards.map((card) => < Card key={card.id} deck = {deck} deckId={deck.id} card ={card} handleDeleteCard={handleDeleteCard} />);
         console.log(list);
       }
 

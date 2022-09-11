@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from "react"; 
-
+import { readDeck } from "../utils/api/index";
 import {useHistory, useParams} from "react-router-dom";
 import { readCard } from "../utils/api/index";
 import CardForm from "./CardForm";
@@ -33,20 +33,22 @@ useEffect(() => {
   }, [cardId]);
 
 
-  const handleCancel = async (id) => {
+  const handleDone = async (id) => {
 
     return history.push(`/decks/${deckId}`); // After done, send the user to the deck screen.
    
  };
 
- const handleSubmit = async (event) => { 
+
+  const handleSave = async (event) => { 
     event.preventDefault(); 
-    console.log("Submitted:", content); 
-    let response =await updateCard(content) ; 
-    history.push(`/decks/${deckId}`)
-    setContent({...initialFormState}); 
-   return response;
+    console.log("Saving:", content); 
+    const updatedCard = {...card, front:content.front, back:content.back}
+   await updateCard(updatedCard) ; 
+      setContent({...initialFormState}); 
+   return   history.push(`/decks/${deckId}`)
   }; 
+
   
 return ( 
 
@@ -63,7 +65,7 @@ return (
 
 <h2>Edit Card</h2>
 
- <CardForm handleCancel={handleCancel} handleSubmit={handleSubmit} content={content} setContent={setContent}/>
+ <CardForm handleDone={handleDone} handleSave={handleSave} content={content} setContent={setContent}/>
  </>
 )
 } 

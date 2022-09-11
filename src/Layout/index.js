@@ -22,7 +22,7 @@ function Layout() {
  <ListDecks />
 </Route>
 
-<Route path = "/decks/new">
+<Route exact path = "/decks/new">
  <CreateDeck />
 </Route>
 
