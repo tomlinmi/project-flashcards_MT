@@ -1,34 +1,49 @@
 import React from "react";
-
-import { readDeck } from "../utils/api";
 import ErrorMessage from "./ErrorMessage";
-import {useParams} from "react-router-dom";
+import {useParams, useHistory} from "react-router-dom";
 
 
-export const Study = ({readDeck})=> {
+export const Study = ({deck, deckId, card, cardId})=> {
 
+
+  const history = useHistory();
       
-  if (readDeck){
+  if (deck){
     return(
 
 
-    <div className="border p-4 h-100 d-flex flex-column">
+      <>
+
+<nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">{deck.name}</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Study</li>
+      </ol>
+    </nav>
+    <div>
+    <h3 className="display-6 mb-6">Study: {deck.name}</h3>
+    </div>
+
+       <div className="border p-4 h-100 d-flex flex-column">
      <div>
-    
-     <h3 className="display-6 mb-6">{readDeck.name}</h3>
+     <p>{deck.cards.length} Cards </p>   //needs to be card x of y
+   
       </div>
-      <p>Card {readDeck.card.id} of {readDeck.cards.length}</p>
-      <p>{readDeck.description}</p>
+
+      <p>{card.front}</p>
  
       <div class="d-grid gap-6 d-md-block">  
-      <button className="btn btn-secondary" onClick={()=>(readDeck.id)}>
-     Flip
-      </button>  
+    
+      <button className="btn btn-secondary" onClick={()=>history.push (card.back)}>  
+      Flip
+      </button>    
+  
       </div>
 
       </div>
 
-          
+    </>      
   
   );
     }
@@ -36,3 +51,9 @@ export const Study = ({readDeck})=> {
 }
 
 export default Study;
+
+
+ 
+
+          
+  

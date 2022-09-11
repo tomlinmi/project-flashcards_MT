@@ -1,4 +1,3 @@
-
 function DeckForm({handleSubmit, handleCancel, content, setContent}){ 
 
     
@@ -52,4 +51,4 @@ return (
     </form>  ); 
 }
 
-    export default DeckForm
+    export default DeckForm;

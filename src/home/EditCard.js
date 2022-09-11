@@ -1,5 +1,4 @@
 import React, { useEffect, useState} from "react"; 
-import { readDeck } from "../utils/api/index";
 import {useHistory, useParams} from "react-router-dom";
 import { readCard } from "../utils/api/index";
 import CardForm from "./CardForm";
@@ -56,7 +55,7 @@ return (
 <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Deck {deckId}</a></li>
+        <li class="breadcrumb-item"><a href="#">Deck {deckId} </a></li>
          <li class="breadcrumb-item active" aria-current="page">Edit Card: {cardId}</li>
       </ol>
     </nav>

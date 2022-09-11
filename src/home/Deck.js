@@ -2,7 +2,7 @@ import ErrorMessage from "./ErrorMessage";
 import {useHistory } from "react-router-dom";
 
 
-export const Deck = ({deck , handleDelete})=> {
+export const Deck = ({deck , handleDelete, handleStudy})=> {
 
 
   const history = useHistory();
@@ -28,7 +28,7 @@ export const Deck = ({deck , handleDelete})=> {
       View
       </button>
 
-      <button className="btn btn-primary" onClick={()=>(deck.id)}>
+      <button className="btn btn-primary" onClick={()=>handleStudy(deck.id)}>
       Study
       </button>
     

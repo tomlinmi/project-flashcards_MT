@@ -1,6 +1,3 @@
-
-
-
 function CardForm({handleDone, handleSave, content, setContent}){ 
 
  
@@ -54,4 +51,4 @@ function CardForm({handleDone, handleSave, content, setContent}){
         </form>  ); 
     }
     
-        export default CardForm
+        export default CardForm;
