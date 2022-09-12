@@ -5,7 +5,7 @@ import { useParams, useHistory} from "react-router-dom";
 import { readDeck } from "../utils/api";
 import {Card} from "./Card";
 
-export const DeckView = ()=> {
+export const ViewDeck = ()=> {
    
         const [deck, setDeck] = useState([]);
         const [error, setError] = useState(undefined);
@@ -72,7 +72,7 @@ const handleAddCards = async (id) => {
 
      let list = [];
       if (deck.cards){
-        list = deck.cards.map((card) => < Card key={card.id} deck = {deck} deckId={deck.id} card ={card} handleDeleteCard={handleDeleteCard} />);
+        list = deck.cards.map((card) => < Card key={card.id} deck={deck} deckId={deck.id} card ={card} handleDeleteCard={handleDeleteCard} />);
         console.log(list);
       }
 
@@ -128,4 +128,4 @@ const handleAddCards = async (id) => {
   
 }
 
-export default DeckView;
+export default ViewDeck;

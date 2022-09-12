@@ -6,7 +6,7 @@ import { updateCard } from "../utils/api/index";
 
 
 
-function EditCard({deckId} ) { 
+function EditCard(deckId ) { 
   
     
 const initialFormState = { 
@@ -21,6 +21,8 @@ const history = useHistory();
 const {cardId} = useParams();
 const[card, setCard]= useState([]);
 
+
+
 useEffect(() => {
     async function getCard() {
       const card = await readCard(cardId);  
@@ -30,7 +32,6 @@ useEffect(() => {
   
     getCard();
   }, [cardId]);
-
 
   const handleDone = async (id) => {
 
