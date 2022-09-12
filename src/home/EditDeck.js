@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from "react"; 
 
-import {useHistory, useParams} from "react-router-dom";
+import {Link, useHistory, useParams} from "react-router-dom";
 import {readDeck} from "../utils/api/index";
 import DeckForm from "./DeckForm";
 import { updateDeck } from "../utils/api/index";
@@ -55,7 +55,7 @@ return (
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">{deck.name}</a></li>
+        <li class="breadcrumb-item"><Link to ={`/decks/${deckId}`}>{deck.name} </Link></li> 
          <li class="breadcrumb-item active" aria-current="page">Edit Deck</li>
       </ol>
     </nav>
