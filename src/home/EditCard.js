@@ -6,7 +6,7 @@ import { updateCard } from "../utils/api/index";
 
 
 
-function EditCard(deckId ) { 
+function EditCard({deckId} ) { 
   
     
 const initialFormState = { 
