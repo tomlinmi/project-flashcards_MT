@@ -1,12 +1,12 @@
 import React, { useEffect, useState} from "react"; 
-import {useHistory, useParams} from "react-router-dom";
+import {Link, useHistory, useParams} from "react-router-dom";
 import { readCard } from "../utils/api/index";
 import CardForm from "./CardForm";
 import { updateCard } from "../utils/api/index";
+import {readDeck} from "../utils/api/index";
 
 
-
-function EditCard({deckId} ) { 
+function EditCard() { 
   
     
 const initialFormState = { 
@@ -21,7 +21,8 @@ const history = useHistory();
 const {cardId} = useParams();
 const[card, setCard]= useState([]);
 
-
+const [deck, setDeck] = useState([]);
+const {deckId} = useParams(); 
 
 useEffect(() => {
     async function getCard() {
@@ -32,6 +33,19 @@ useEffect(() => {
   
     getCard();
   }, [cardId]);
+
+
+
+  useEffect(() => {
+    async function getDeck() {
+      const deck = await readDeck(deckId);  
+      setDeck(deck);
+    
+    }
+ 
+    getDeck();
+  }, [deckId]);
+ 
 
   const handleDone = async (id) => {
 
@@ -56,7 +70,7 @@ return (
 <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Deck {deckId} </a></li>
+        <li class="breadcrumb-item"><Link to ={`/decks/${deckId}`}>Deck {deckId}  </Link></li> 
          <li class="breadcrumb-item active" aria-current="page">Edit Card: {cardId}</li>
       </ol>
     </nav>
