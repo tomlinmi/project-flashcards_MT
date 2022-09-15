@@ -11,13 +11,13 @@
       "id": 2
     },
     {
-      "name": "Michelle",
-      "description": "This is a test",
+      "name": "Test Deck 1",
+      "description": "This is a test, this deck is the 3rd Deck created to test the program . ",
       "id": 3
     },
     {
-      "name": "Michelle Test 2",
-      "description": "This is another deck created",
+      "name": "Test Deck 2",
+      "description": "This is another deck created to test the program.   No new functionality added.",
       "id": 4
     }
   ],

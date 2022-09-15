@@ -25,6 +25,14 @@ const handleDelete = async (id) => {
     
   };
 
+  const handleStudy = async (id) => {
+
+    return history.push (`/decks/${id}/study`); 
+   
+  };
+
+
+
 useEffect(() => {
  
   const abortController = new AbortController();
@@ -38,7 +46,8 @@ useEffect(() => {
     return <ErrorMessage error={error} />;
   }
  
-  const list = decks.map((deck) => < Deck key={deck.id} deck={deck} handleDelete={handleDelete} />);
+  const list = decks.map((deck) => < Deck key={deck.id} deck={deck} handleStudy = {() => {handleStudy(deck.id)}}
+  handleDelete={handleDelete} />);
 console.log(list);
 
  

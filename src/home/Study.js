@@ -1,21 +1,60 @@
 import React, { useEffect, useState} from "react";
 import {Link, useParams, useHistory} from "react-router-dom";
 import { readDeck } from "../utils/api";
-import {Card} from "./Card";
-import CardForm from "./CardForm";
 import { readCard } from "../utils/api";
 import ErrorMessage from "./ErrorMessage";
 
-export const Study = (deck, deckId, card)=> {
+export const Study = ()=> {
 
-  const history = useHistory();
+      
+const initialFormState = { 
+  front:"", 
+
+  back: "", 
+ }; 
+
+const [content, setContent] = useState({...initialFormState}); 
+const history = useHistory();
+
+
+
+const [deck, setDeck] = useState({cards:[]}); //initialize deck to empty deck of cards
+const {deckId} = useParams(); 
+const [card, setCard]=useState ({...initialFormState}); 
+const [cardIndex, setCardIndex] = useState(0);
+const [isFront, setIsFront] = useState (true);
+
+
+
+  useEffect(() => {
+    async function getDeck() {
+      const deck = await readDeck(deckId);  
+      setDeck(deck);
+      setCard(deck.cards[0]);
+    console.log(deck);
+    }
+ 
+    getDeck();
+  }, [deckId]);
+
 
   const handleFlip = async (id) => {
 
-      return //history.push (`/decks/${deck.id}/study`); 
-     
+setIsFront((value) => {value = !isFront})// check syntax
+
+      return     
     };
+
+//const nextButton = isFront? "Flip": "Next";  
  
+//need to increment the card index
+
+const handleNext = async (id)=>{
+
+
+return
+
+};
       
     if (deck){
       return(
@@ -37,14 +76,19 @@ export const Study = (deck, deckId, card)=> {
        <h3 className="display-6 mb-6">{deck.name}</h3>
         </div>
   
-        <p>{card.front}</p>
+        <p>{isFront? card.front: card.back}</p>
    
         <div class="d-grid gap-6 d-md-block">  
       
-        <button className="btn btn-secondary"  onClick={()=>handleFlip(card.back)}>  
-      Flip
+        <button className="btn btn-secondary"  onClick={()=>handleFlip()}>  
+     Flip
       </button> 
-       
+{!isFront &&
+
+      <button className="btn btn-primary"  onClick={()=>handleNext()}>  
+   Next
+      </button> 
+    }
     
         </div>
   

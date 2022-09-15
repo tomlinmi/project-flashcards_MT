@@ -13,8 +13,10 @@ import EditCard from "../home/EditCard";
 function Layout() {
   return (
     <>
-      <Header />
-      <div className="container">
+    
+    <Header />
+<div className="container">
+ 
         {/* TODO: Implement the screen starting here */}
 
         <Switch>
@@ -51,6 +53,7 @@ function Layout() {
 </Route>
 
         </Switch>
+        
       </div>
     </>
   );
