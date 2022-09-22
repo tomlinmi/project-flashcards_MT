@@ -47,31 +47,6 @@
       "id": 4
     },
     {
-      "cards": [],
-      "front": "updated card",
-      "back": "card updated",
-      "deckId": 1,
-      "id": 7
-    },
-    {
-      "front": "New Card",
-      "back": "Add new card",
-      "deckId": 1,
-      "id": 8
-    },
-    {
-      "front": "New Card 2",
-      "back": "Add new card 2 ",
-      "deckId": 1,
-      "id": 9
-    },
-    {
-      "front": "Card 3",
-      "back": "New card 3",
-      "deckId": 1,
-      "id": 10
-    },
-    {
       "front": "New Card 1 - with update. With  2nd update. Update # 3",
       "back": "This is new Card 1",
       "deckId": 3,
