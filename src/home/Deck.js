@@ -1,3 +1,4 @@
+import React from "react";
 import ErrorMessage from "./ErrorMessage";
 import {useHistory } from "react-router-dom";
 
@@ -12,7 +13,6 @@ export const Deck = ({deck , handleDelete, handleStudy})=> {
     return(
 <>
     
-
 
     <div className="border p-4 h-100 d-flex flex-column">
      <div>
