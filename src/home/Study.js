@@ -27,7 +27,7 @@ const [isFront, setIsFront] = useState ([]);
       const deck = await readDeck(deckId);  
       setDeck(deck);
       setCard(deck.cards[0]);
-    console.log(deck);
+    //console.log(deck);
     }
  
     getDeck();
@@ -86,10 +86,10 @@ const handleAddCards = async (id) => {
       
 
 <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><Link to ={`/decks/${deckId}`}>{deck.name} </Link></li> 
-        <li class="breadcrumb-item active" aria-current="page">Study</li>
+      <ol className="breadcrumb">
+        <li className="breadcrumb-item"><a href="/">Home</a></li>
+        <li className="breadcrumb-item"><Link to ={`/decks/${deckId}`}>{deck.name} </Link></li> 
+        <li className="breadcrumb-item active" aria-current="page">Study</li>
       </ol>
 </nav>
     
@@ -97,12 +97,12 @@ const handleAddCards = async (id) => {
   <div>
 
       <h6> Card {cardIndex+1} of {deck.cards.length} </h6>   
-       <h3 className="display-6 mb-6">{deck.name}</h3>
+       <h3 className="display-6 mb-6">Study: {deck.name}</h3>
   </div>
   
         <p>{isFront? card.front: card.back}</p>
    
-    <div class="d-grid gap-6 d-md-block">  
+    <div className="d-grid gap-6 d-md-block">  
       
         <button className="btn btn-secondary"  onClick={()=>handleFlip()}>  
      Flip
@@ -126,24 +126,24 @@ return (
 
 <>   
       <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item"><Link to ={`/decks/${deckId}`}>{deck.name} </Link></li> 
-              <li class="breadcrumb-item active" aria-current="page">Study</li>
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item"><a href="/">Home</a></li>
+              <li className="breadcrumb-item"><Link to ={`/decks/${deckId}`}>{deck.name} </Link></li> 
+              <li className="breadcrumb-item active" aria-current="page">Study</li>
             </ol>
       </nav>
 
       <div className="border p-4 h-100 d-flex flex-column">
   <div>
  
-       <h3 className="display-6 mb-6">{deck.name}</h3>
+       <h3 className="display-6 mb-6">{deck.name}: Study</h3>
   </div>
-        <h6> Not enough cards</h6>
+        <h6> Not enough cards!</h6>
         <p>You need at least 3 cards to study. There are {deck.cards.length} cards in this deck 
         
         </p>
    
-    <div class="d-grid gap-6 d-md-block">  
+    <div className="d-grid gap-6 d-md-block">  
       
         <button className="btn btn-primary"  onClick={()=>handleAddCards()}>  
     Add Card

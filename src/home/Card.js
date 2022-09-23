@@ -28,7 +28,7 @@ const handleEditCard = async (id) => {
       <p>{card.front}</p>
       <p>{card.back}</p>
  
-      <div class="d-grid gap-6 d-md-block">  
+      <div className="d-grid gap-6 d-md-block">  
     
       <button className="btn btn-secondary" onClick={()=>handleEditCard(card.id)}>  
      Edit

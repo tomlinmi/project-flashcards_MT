@@ -48,7 +48,7 @@ useEffect(() => {
  
   const list = decks.map((deck) => < Deck key={deck.id} deck={deck} handleStudy = {() => {handleStudy(deck.id)}}
   handleDelete={handleDelete} />);
-console.log(list);
+//console.log(list);
 
  
 

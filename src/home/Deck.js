@@ -22,7 +22,7 @@ export const Deck = ({deck , handleDelete, handleStudy})=> {
 
       <p>{deck.description}</p>
  
-      <div class="d-grid gap-6 d-md-block">  
+      <div className="d-grid gap-6 d-md-block">  
     
       <button className="btn btn-secondary" onClick={()=>history.push (`/decks/${deck.id}`)}>  
       View

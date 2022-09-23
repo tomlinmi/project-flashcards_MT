@@ -1,3 +1,5 @@
+import React from "react";
+
 function DeckForm({handleSubmit, handleCancel, content, setContent}){ 
 
     
@@ -15,7 +17,7 @@ return (
           <div> 
             <p>Name</p>
          
-              <input 
+              <input cols={75} resize = "none"
                 id="name" 
                 name="name" 
                 type="text" 

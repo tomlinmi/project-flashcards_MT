@@ -12,12 +12,12 @@
     },
     {
       "name": "Test Deck 1",
-      "description": "This is a test, this deck is the 3rd Deck created to test the program . ",
+      "description": "This is a test, this deck is the 3rd Deck created to test the program .  This is for the Flashcard project.  ",
       "id": 3
     },
     {
       "name": "Test Deck 2",
-      "description": "This is another deck created to test the program.   No new functionality added.",
+      "description": "This is another deck created to test the program.   No new functionality added.\n This is for the Flashcard project.  ",
       "id": 4
     }
   ],
@@ -47,10 +47,28 @@
       "id": 4
     },
     {
-      "front": "New Card 1 - with update. With  2nd update. Update # 3",
+      "front": "New Card 1 - with update. With  2nd update. Update # 3.  This is for the Flashcard project.  ",
       "back": "This is new Card 1",
       "deckId": 3,
       "id": 11
+    },
+    {
+      "front": "Test Card 2.  This is for the Flashcard project.  One of many cards in the this deck.",
+      "back": "This is test card 2",
+      "deckId": 2,
+      "id": 12
+    },
+    {
+      "front": "Test Card 3. This is for the Flashcard project.  One of many cards in this deck.",
+      "back": "This is test card 3",
+      "deckId": 2,
+      "id": 13
+    },
+    {
+      "front": "Test Card 4. This is for the Flashcard project.  One of many cards in the this deck.",
+      "back": "This is test card 4",
+      "deckId": 2,
+      "id": 14
     }
   ]
 }

@@ -73,7 +73,7 @@ const handleAddCards = async (id) => {
      let list = [];
       if (deck.cards){
         list = deck.cards.map((card) => < Card key={card.id} deck={deck} deckId={deck.id} card ={card} handleDeleteCard={handleDeleteCard} />);
-        console.log(list);
+        //console.log(list);
       }
 
  
@@ -81,9 +81,9 @@ const handleAddCards = async (id) => {
     return(
     <>
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{deck.name}</li>
+      <ol className="breadcrumb">
+        <li className="breadcrumb-item"><a href="/">Home</a></li>
+        <li className="breadcrumb-item active" aria-current="page">{deck.name}</li>
       </ol>
     </nav>
 
@@ -97,7 +97,7 @@ const handleAddCards = async (id) => {
 
       <p>{deck.description}</p>
  
-      <div class="d-grid gap-6 d-md-block">  
+      <div className="d-grid gap-6 d-md-block">  
     
       <button className="btn btn-secondary" onClick={()=>handleEditDeck(deck.id)}>
       Edit
