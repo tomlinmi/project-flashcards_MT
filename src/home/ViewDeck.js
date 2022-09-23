@@ -99,19 +99,19 @@ const handleAddCards = async (id) => {
  
       <div className="d-grid gap-6 d-md-block">  
     
-      <button className="btn btn-secondary" onClick={()=>handleEditDeck(deck.id)}>
+      <button className="btn btn-secondary mr-2" onClick={()=>handleEditDeck(deck.id)}>
       Edit
       </button>
 
-      <button className="btn btn-primary" onClick={()=>handleStudy(deck.id)}>
+      <button className="btn btn-primary mr-2" onClick={()=>handleStudy(deck.id)}>
       Study
       </button>
 
-      <button className="btn btn-primary" onClick={()=>handleAddCards(deck.id)}>
+      <button className="btn btn-primary mr-2" onClick={()=>handleAddCards(deck.id)}>
       + Add Cards
       </button>
     
-      <button className="btn btn-danger" onClick={()=>handleDelete(deck.id)}>
+      <button className="btn btn-danger float-right" onClick={()=>handleDelete(deck.id)}>
       Delete Deck
       </button>
     

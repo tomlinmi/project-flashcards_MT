@@ -30,11 +30,11 @@ const handleEditCard = async (id) => {
  
       <div className="d-grid gap-6 d-md-block">  
     
-      <button className="btn btn-secondary" onClick={()=>handleEditCard(card.id)}>  
+      <button className="btn btn-secondary mr-2" onClick={()=>handleEditCard(card.id)}>  
      Edit
       </button>
     
-      <button className="btn btn-danger" onClick={()=>handleDeleteCard(card.id)}>
+      <button className="btn btn-danger mr-2" onClick={()=>handleDeleteCard(card.id)}>
       Delete Card
       </button>
      
