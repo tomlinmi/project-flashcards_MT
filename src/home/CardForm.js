@@ -2,14 +2,11 @@ import React from "react";
 
 function CardForm({handleDone, handleSave, content, setContent}){ 
 
- 
-
-  
+   
     const handleChange = ({target}) => { 
       const value = target.value; setContent({ ...content, [target.name]: value, }); }; 
     
-     
-    
+         
     return ( 
      
         <form name="create" onSubmit={(event)=>handleSave(event)}> 

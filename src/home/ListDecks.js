@@ -32,7 +32,6 @@ const handleDelete = async (id) => {
   };
 
 
-
 useEffect(() => {
  
   const abortController = new AbortController();

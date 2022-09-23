@@ -1,10 +1,7 @@
 import React from "react";
 
 function DeckForm({handleSubmit, handleCancel, content, setContent}){ 
-
-    
-
-
+ 
 
 const handleChange = ({target}) => { 
   const value = target.value; setContent({ ...content, [target.name]: value, }); }; 

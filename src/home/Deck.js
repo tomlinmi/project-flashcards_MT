@@ -13,7 +13,6 @@ export const Deck = ({deck , handleDelete, handleStudy})=> {
     return(
 <>
     
-
     <div className="border p-4 h-100 d-flex flex-column">
      <div>
      <h7 className = "mb-2 text-muted float-right">{deck.cards.length} cards</h7>
